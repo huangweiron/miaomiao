@@ -1,15 +1,17 @@
 <template>
   <div>
-    <ul>
-      <li v-for="item in comingList" :key="item.id">
-        <div class="pic">
-          <img :src="item.img | setWH('80.100')" alt />
-        </div>
-        <div>
-          <h2>{{item.nm}}</h2>
-        </div>
-      </li>
-    </ul>
+    <Scroller>
+      <ul>
+        <li v-for="item in comingList" :key="item.id">
+          <div class="pic">
+            <img :src="item.img | setWH('80.100')" alt />
+          </div>
+          <div>
+            <h2>{{item.nm}}</h2>
+          </div>
+        </li>
+      </ul>
+    </Scroller>
   </div>
 </template>
 <script>

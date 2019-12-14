@@ -1,5 +1,7 @@
 <template>
   <div class="city_list">
+    <!-- <Scroller ref="city_list">
+    <div>-->
     <div class="remen">
       <h2>热门城市</h2>
       <ul>
@@ -14,6 +16,8 @@
         </ul>
       </div>
     </div>
+    <!-- </div>
+    </Scroller>-->
     <div class="city_index">
       <ul>
         <li
@@ -95,12 +99,10 @@ export default {
       };
     },
     handleTuIndex(index) {
-      // this.$refs.city_sort.parentNode.scrollTop = h2[index].offsetTop;
       var h2 = this.$refs.city_sort.getElementsByTagName("h2");
-      this.$nextTick(() => {
-        this.$refs.city_sort.parentNode.scrollTop = h2[index].offsetTop;
-        console.log(this.$refs.city_sort.parentNode.scrollTop);
-      });
+
+      this.$refs.city_sort.parentNode.scrollTop = h2[index].offsetTop;
+      // this.$refs.city_list.tOScrollTo(-h2[index].offsetTop);
     }
   }
 };
