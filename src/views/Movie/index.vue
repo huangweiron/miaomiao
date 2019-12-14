@@ -13,6 +13,7 @@
         <router-link tag='div' to=/movie/search class="search_entry">
           <span>搜索</span>
         </router-link>
+        
       </div>
       <keep-alive>
         <router-view />
@@ -33,6 +34,7 @@ export default {
 };
 </script>
 <style scoped>
+body,html{width:100%;height:100%;}
 #content .movie_menu{width: 100%;height:45px;border-bottom:1px solid #e6e6e6;display:flex;justify-content: space-between}
 .movie_menu .city_name{margin-left:20px;height:100%;line-height: 45px;}
 .movie_menu .city_name.active{color:#ef4238;border-bottom: 2px solid #ef4238;}
@@ -44,5 +46,5 @@ export default {
 .movie_menu .search_entry{margin-right:20px;height:100%;line-height: 45px;}
 .movie_menu .search_entry.active{color:#ef4238;border-bottom: 2px solid #ef4238;}
 .movie_menu .search_entry.router-link-active{color:#ef4238;border-bottom: 2px solid #ef4238;}
-.movie_menu .search_entry span{font-size:24px;color:red;}
+.movie_menu .search_entry span{color:red;}
 </style>
