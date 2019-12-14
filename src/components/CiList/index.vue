@@ -9,7 +9,7 @@
         <p>{{item.addr}}</p>
         <p>{{item.distance}}</p>
         <div>
-          <p v-for="(itemCard,key) in item.tag" :key="key">{{num}}</p>
+          <p v-for="(num,key) in item.tag" v-if="num===1" :key="key">{{key | forma}}</p>
         </div>
       </li>
     </ul>
@@ -32,6 +32,11 @@ export default {
         // console.log(this.cinemaList);
       }
     });
+  },
+  filters:{
+    forma(key){
+
+    }
   }
 };
 </script>
